@@ -1,0 +1,34 @@
+package junit5test;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+
+import junit5calc.Calculator;
+
+public class BforeAndAfterTest {
+	 Calculator calc;
+	 @BeforeEach
+	 public void init() {
+		 calc= new Calculator();
+		 System.out.println("Phle em aaya");
+	 }
+	 @Test
+	 @DisplayName("Adding two +ve nums")
+     public void testM1() {
+    	 
+    	 int sum= calc.add(10,20);
+    	 System.out.println("the sum is :"+ sum);
+    
+    	 
+     }
+	 @Test
+	 @DisplayNmae("Adding two nums")
+	 public void testM2() {
+    	 
+    	 int sum= calc.add(-40,20);
+    	 System.out.println("the sum is :"+ sum);
+    
+    	 
+     }
+}
